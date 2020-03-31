@@ -4,6 +4,7 @@ Parent:         List
 Id:             IHE.MHD.Minimal.ListManifest
 Title:          "MHD SubmissionSet in List"
 Description:    "A profile on the List resource for MHD SubmissionSet."
+Alias: 			ReasonCodeExtension = http://hl7.org/fhir/StructureDefinition/workflow-reasonCode
 * ^version = "3.1.1"
 * ^date = "2020-02-01"
 * ^publisher = "Integrating the Healthcare Enterprise (IHE)" 
@@ -17,10 +18,10 @@ Description:    "A profile on the List resource for MHD SubmissionSet."
 //  fhir version comes from IG definition
 // mappings are yet to be implemented
 
-* extension contains workflow-reasonCode 0..*
+* extension contains ReasonCodeExtension named workflow-reasonCode 0..*
 * identifier 0..*
 //* status
-//TODO put this in after sushi bug is fixed * mode = #working
+* mode = #working
 * title 1..1
 * code 1..1 
 * code = MHDlistTypes#submissionset
