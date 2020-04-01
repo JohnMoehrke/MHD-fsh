@@ -4,7 +4,6 @@ Parent:         List
 Id:             IHE.MHD.Minimal.ListManifest
 Title:          "MHD SubmissionSet in List"
 Description:    "A profile on the List resource for MHD SubmissionSet."
-Alias: 			ReasonCodeExtension = http://hl7.org/fhir/StructureDefinition/workflow-reasonCode
 * ^version = "3.1.1"
 * ^date = "2020-02-01"
 * ^publisher = "Integrating the Healthcare Enterprise (IHE)" 
