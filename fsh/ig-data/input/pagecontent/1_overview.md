@@ -65,7 +65,11 @@ This use case presumes that the sending mobile device knows the location of the 
 #### Publication of new documents Process Flow
 The publication of a new document(s) is done using the Provide Document Bundle [ITI-65] transaction, which carries both the document and its metadata. This transaction is analogous to an XDS Provide and Register Document Set-b [ITI-41] transaction.
 
-TODO insert flow diagram
+![Figure: Use Case 1 process flow](usecase1-processflow.svg "Figure: Use Case 1 process flow")
+
+<div style="clear: left"/>
+
+**Figure: Use Case 1 Process Flow**
 
 ### Use Case 2: Discovery and Retrieval of existing documents
 
@@ -79,7 +83,11 @@ Alternatively, the Find Document Manifest [ITI-66] transaction is used to issue 
 
 The Retrieve Document [ITI-68] transaction is used to get the document itself.
 
-TODO insert flow diagram
+![Figure: Use Case 2 process flow](usecase2-processflow.svg "Figure: Use Case 2 process flow")
+
+<div style="clear: left"/>
+
+**Figure: Use Case 2 Process Flow**
 
 ### Mapping to RESTful operators
 The MHD Profile defines a set of transactions against FHIR Resources. These are summarized in Table 33.4.4-1. MHD does not use any additional extended or custom methods.

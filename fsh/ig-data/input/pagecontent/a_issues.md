@@ -10,7 +10,7 @@
 * MHD_053: Note that there is an emerging issue that FHIR has not addressed and that is how distributed systems behave, and how Patient links affect recorded data. Thus, it is difficult to determine today that the response Bundle content all will be pointing at the exact same Patient, although they should all be referring to the same human.
 * CP-ITI-1116: Dissonance between FHIR concept of Transaction, and XDS Provide and Register transaction. This is partially addressed in CP-ITI-1095 regarding PartialFolderContentNotProcessed. In that a Document Responder is allowed to fail the full transaction according to FHIR transaction rules but is also allowed to soft warn. The soft warn would most likely be needed when implementing XDS-on-FHIR, as the XDS actors will have returned warnings. Thus, the Document Recipient must be allowed to return these soft warnings. In this case the MHD Document Recipient can’t undo the XDS transaction, so it must be allowed to return success with warnings.
 
-####Closed Issues
+#### Closed Issues
 
 * Resolved in MHD Revision 3.0
 * MHD_054: Request to add the identifier query parameter to DocumentReference and DocumentManifest. 

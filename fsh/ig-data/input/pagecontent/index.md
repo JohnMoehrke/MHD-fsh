@@ -3,23 +3,6 @@ The Mobile access to Health Documents (MHD) Profile defines one standardized int
 
 [Open and Closed Issues](a_issues.html)
 
-
-
-### About This Guide
-This is a draft implementation guide to promote discussion with leaders in the Health
-IT industry, and very much a work in progress.  All content in this guide is subject
-to discussion and change.
-
-The goal of publishing this guide is to encourage the creation of a community interested
-in extremely rapid development of interfaces that can support communication Bed and other
-resources to Public Health in this time of crisis.  [Audacious Inquiry](https://ainq.com) is publishing this
-material as follows:
-
-This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/) ![Creative Commons License](https://i.creativecommons.org/l/by/4.0/80x15.png)
-
-This implementation guide provides the FHIR Implementation materials associated with
-the SANER project.
-
 ### Organization of This Guide
 This guide is organized into four main sections:
 
@@ -51,5 +34,5 @@ You can also download:
 * the example resources in [json](examples.json.zip), [xml](examples.xml.zip) or [ttl](examples.ttl.zip) format.
 
 The source code for this Implementation Guide can be found on
-[https://github/IHE/MHD-fsh](https://github.com/IHE/MHD-fsh).
+[https://github/JohnMoehrke/MHD-fsh](https://github.com/JohnMoehrke/MHD-fsh).
 

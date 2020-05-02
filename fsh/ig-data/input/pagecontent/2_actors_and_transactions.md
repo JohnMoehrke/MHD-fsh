@@ -1,17 +1,15 @@
 
 This section defines the actors and transactions in this implementation guide.
 
-Figure 1.1-1 below shows the actors directly
+Figure below shows the actors directly
 involved in the MHD 
 Profile and the relevant transactions between them.
 
-
-
-![Figure 3-1: MHD Actor Diagram](ActorsAndTransactions.svg "Figure 3-1: MHD Actor Diagram")
+![Figure: MHD Actor Diagram](ActorsAndTransactions.svg "Figure: MHD Actor Diagram")
 
 <div style="clear: left"/>
 
-**Figure 3-1: MHD Actor Diagram**
+**Figure: MHD Actor Diagram**
 
 Table 3-1 lists the transactions for each actor directly involved in the MHD Implementation Guide. To claim compliance with this guide, an actor shall
 support all required transactions (labeled "R") and may support the
