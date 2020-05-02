@@ -17,14 +17,14 @@ Description:    "A profile on the DocumentReference resource for MHD Comprehensi
 //  fhir version comes from IG definition
 // mappings are yet to be implemented in sushi
 
-* type 1..*
+* type 1..1
 * category 1..*
 * subject 1..1
 * date 1..1
 * securityLabel 1..*
-* content.attachment.language 1..*
+* content.attachment.language 1..1
 * content.attachment.creation 1..1
-* content.format 1..*
-* context.facilityType 1..*
-* context.practiceSetting 1..*
+* content.format 1..1
+* context.facilityType 1..1
+* context.practiceSetting 1..1
 

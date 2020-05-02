@@ -31,7 +31,7 @@ Description:    "A profile on the DocumentReference resource for MHD."
 * securityLabel MS
 * content 1..1
 * content.attachment MS
-* content.attachment.contentType 1..*
+* content.attachment.contentType 1..1
 * content.attachment.contentType MS
 * content.attachment.language MS
 * content.attachment.data 0..0

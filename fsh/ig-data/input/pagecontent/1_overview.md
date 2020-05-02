@@ -1,14 +1,6 @@
 
 The Mobile access to Health Documents (MHD) Profile defines one standardized interface to health documents (a.k.a. an Application Programming Interface (API)) for use by mobile devices so that deployment of mobile applications is more consistent and reusable. The transactions defined here leverage the document content- and format-agnostic metadata concepts from XDS but simplify them for access in constrained environments including mobile devices. The MHD Profile does not replace XDS. Mobile devices, and other resource-constrained systems, can use MHD to access to an XDS Repository. The following figure shows one possible way to implement MHD within a document sharing environment (that may be, but is not necessarily, XDS-based). This implementation choice is not mandatory, and we recognize other architectures will be implemented. 
 
-**EDITOR TODO**
-
-TODO: Convert Folder and SubmissionSet narrative to the use of List. Narrative today is mostly right out of existing MHD and thus uses DocumentManifest.
-
-TODO: figure out how to better handle persistant section numbers and references. Today I left in orginal numbers most of the time. Today I only changed a few to markdown links for experimentation.
-
-TODO: Finish the audit events
-
 ### About This Guide
 
 This is an experimental project to show how to publish an IHE Profile using FHIR and Sushi. The profile prototyped is the Mobile access to Health Documents (MHD). The text contained is also including some future profile changes to utalize List resource for both SubmissionSet and Folder.

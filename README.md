@@ -1,9 +1,11 @@
-# ITI.MHD
+# ITI.MHD Sushi
 ImplementationGuide for IHE IT Infrastructure Technical Framework Supplement http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD) Mobile access to Health Documents (MHD) Rev. 3.1.
+
+This IG has converted from DocumentManifest to use of List for both SubmissionSet and Folder
  
 The IHE MHD Profile text is Normative, this IG publication is Informative.
 
-This Continuous Build will appear somewhere
+This Continuous Build will appear http://build.fhir.org/ig/JohnMoehrke/MHD-fsh/index.html
 
 ## Done
 
@@ -12,23 +14,25 @@ This Continuous Build will appear somewhere
 1. canonical must go back to using period not underbar
 1. some examples from Bill's test bench, and from Oliver. 
 1. published using the IHE template
+1. Add narrative body from volume 1
 
 ## TODO
-1. Add narrative body from volume 1
-1. Add narrative to the conformance resources
+1. Add narrative to the conformance resources -- note conformance resource is not supported in FSH, and the FSH complier required JSON disallowing XML conformance resource. 
 1. Add narrative to the examples
 1. Add examples from US-Core, or elsewhere?
-1. add ATNA mapping? or profile? or example? or just point at Gazelle? or get FHIR structureDefinitions from Gazelle?
 1. make sure there is a page for security, privacy, provenance, safety, error handling, dependency, 
 1. bring in the test scripts from Bill's test infrastructure
 1. get the DependsOn on FormatCode IG working
 1. The profiling of a Bundle seems to not be the same as for Resources. Thus I have added a more simple bundle "degenerate". This is not enforcing the full MHD Provide transaction requirements.
+1. Convert Folder and SubmissionSet narrative to the use of List. Narrative today is mostly right out of existing MHD and thus uses DocumentManifest.
+1. Finish the audit events for Find Lists, Find Documents, and Retrieve Document
 
 ## IHE issues
 
 1. canonical url -- should we include realm in the URI like hl7?
 1. why do we need to add .fhir at the end of all profile id?
 1. need template git repository with layout for IHE --- reflect the current supplement template in sample-ig
+1. figure out how to better handle persistant section numbers and references. Today I left in orginal numbers most of the time. Today I only changed a few to markdown links for experimentation.
 
 ## Test
 
