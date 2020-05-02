@@ -3,7 +3,7 @@ ImplementationGuide for IHE IT Infrastructure Technical Framework Supplement htt
  
 The IHE MHD Profile text is Normative, this IG publication is Informative.
 
-This Continuous Build will appear http://build.fhir.org/ig/IHE/ITI.MHD/branches/master/index.html
+This Continuous Build will appear somewhere
 
 ## Done
 
