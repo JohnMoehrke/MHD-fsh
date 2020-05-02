@@ -1,6 +1,7 @@
 Instance:   minimalFolderList
 InstanceOf: IHE.MHD.Minimal.ListFolder
 Title:      "Folder in List resource conforming only to Minimal metadata"
+* meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * identifier[0].system = "urn:ietf:rfc:3986"
 * identifier[0].value = "urn:oid:1.2.129.6.58.92.88337.4"
 * identifier[0].use = #official
