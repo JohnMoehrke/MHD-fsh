@@ -53,6 +53,9 @@
       <li>
         <a href="appendix_z.html">Z: FHIR Common IHE Constraints</a>
       </li>
+      <li>
+        <a href="testplan.html">Test Plan</a>
+      </li>
     </ul>
   </li>
   <li><a href="artifacts.html">Artifact Index</a></li>

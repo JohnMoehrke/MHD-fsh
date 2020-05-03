@@ -23,6 +23,7 @@ This guide is organized into four main sections:
 4. Appendix
 	1. [E: FHIR Identifier Type for CX](appendix_e.html)
 	2. [Z: FHIR Common IHE Constraints](appendix_z.html)
+	3. [Test Plan](testplan.html)
 
 Click on any of the links above, head on over the [table of contents](toc.html), or
 if you are looking for a specific artifact, check out the [index](artifacts.html).
