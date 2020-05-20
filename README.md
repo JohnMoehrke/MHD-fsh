@@ -1,4 +1,6 @@
 # ITI.MHD Sushi
+this GITHUB repository is experimental!
+
 ImplementationGuide for IHE IT Infrastructure Technical Framework Supplement http://wiki.ihe.net/index.php/Mobile_access_to_Health_Documents_(MHD) Mobile access to Health Documents (MHD) Rev. 3.1.
 
 This IG has converted from DocumentManifest to use of List for both SubmissionSet and Folder
