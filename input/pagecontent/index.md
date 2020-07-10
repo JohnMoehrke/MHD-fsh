@@ -6,10 +6,10 @@ The Mobile access to Health Documents (MHD) Profile defines one standardized int
 ### Organization of This Guide
 This guide is organized into four main sections:
 
-1. Volume I: [Overview](overview.html)
-   1. [Actors and Transactions](actors_and_transactions.html)
-   2. [Security Considerations](security_considerations.html)
-   3. [Cross Profile Considerations](grouping.html)
+1. Volume I: [Overview](1_overview.html)
+   1. [Actors and Transactions](2_actors_and_transactions.html)
+   2. [Security Considerations](3_security_considerations.html)
+   3. [Cross Profile Considerations](4_grouping.html)
 
 2. Volume II: Transaction Detail
    1. [Provide Document Bundle [ITI-65]](transaction-65.html)

@@ -6,28 +6,15 @@ The Provide Document Bundle [ITI-65] transaction passes a Provide Document Bundl
 
 ### Actors Roles
 
-<table border='1' borderspacing='0'>
-<caption><b>Table: Actor Roles</b></caption>
-<thead><tr><th>Actor</th><th>Role</th></tr></thead>
-<tbody>
-<tr><td><a href="actors_and_transactions.html#document-source">Document Source</a></td>
-<td>Sends documents and metadata to the Document Recipient</td>
-</tr>
-<tr><td><a href="actors_and_transactions.html#document-recipient">Document Recipient</a></td>
-<td>Accepts the document and metadata sent from the Document Source</td>
-</tr>      
-</tbody>
-</table>
+**Table: Actor Roles**
+|Actor | Role |
+|-------------------+--------------------------|
+|Document Source    | Sends documents and metadata to the Document Recipient |
+|Document Recipient | Accepts the document and metadata sent from the Document Source |
 
 ### Referenced Standards
 
-<table border='1' borderspacing='0'>
-<caption><b>Table: Referenced Standards</b></caption>
-<thead><tr><th>Standard</th><th>Name</th></tr></thead>
-<tbody>
-<tr><td>FHIR-R4</td><td><a href='http://www.hl7.org/FHIR/R4'>HL7 FHIR Release 4.0</a></td></tr>
-</tbody>
-</table>
+**FHIR-R4** [HL7 FHIR Release 4.0](http://www.hl7.org/FHIR/R4)
 
 ### Interactions
         
@@ -143,7 +130,7 @@ If the Document Recipient returns an HTTP redirect response (HTTP status codes 3
 
 The Document Source processes the results according to application-defined rules.	
 
-#### CapabilityStatement Resource
+### CapabilityStatement Resource
 
 Document Recipient implementing this transaction shall provide a CapabilityStatement Resource as described in [ITI TF-2x: Appendix Z.3](appendix_z.html#capability) indicating the transaction has been implemented. 
 * Requirements CapabilityStatement for [Document Source](IHE.MHD.DocumentSource.html)

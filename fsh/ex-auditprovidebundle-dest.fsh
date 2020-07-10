@@ -1,7 +1,6 @@
 Instance: ex-auditProvideBundle-dest
 InstanceOf: IHE.MHD.ProvideBundle.Audit.Dest
 Title: "Audit Example for a Provide Bundle Transaction as recorded at the destination"
-
 * type = http://dicom.nema.org/resources/ontology/DCM#110107 "Import"
 * action = #C
 * subtype = urn:ihe:event-type-code#ITI-65 "Provide Document Bundle"

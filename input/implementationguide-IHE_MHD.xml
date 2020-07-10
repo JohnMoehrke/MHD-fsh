@@ -15,6 +15,7 @@ The IHE MHD Profile text is Normative, this conformance resource is Informative.
 	</extension>
 -->
 	<url value="http://ihe.net/fhir/ihe.mhd.fhir/ImplementationGuide/ihe.mhd.fhir" />
+	<version value="0.1.0" />	
 	<name value="IHE_MHD" />
 	<status value="active" />
 	<experimental value="false" />
@@ -195,8 +196,37 @@ The IHE MHD Profile text is Normative, this conformance resource is Informative.
         <title value="Test Plan"/>
         <generation value="markdown"/>
       </page>
+      <page>
+        <nameUrl value="transaction-65.html"/>
+        <title value="Transaction ITI-65"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="transaction-66.html"/>
+        <title value="Transaction ITI-66"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="transaction-67.html"/>
+        <title value="Transaction ITI-67"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="transaction-68.html"/>
+        <title value="Transaction ITI-68"/>
+        <generation value="markdown"/>
+      </page>
     </page>
-  </definition>
+		<!-- copyright year is a mandatory parameter -->
+		<parameter>
+		  <code value="copyrightyear"/>
+		  <value value="2019+"/>
+		</parameter>
+		<!-- releaselabel should be the ballot status for HL7-published IGs. -->
+		<parameter>
+		  <code value="releaselabel"/>
+		  <value value="CI Build"/>
+		</parameter>  </definition>
 
 
 </ImplementationGuide>

@@ -1,124 +1,40 @@
-This implementation guide uses the HL7 FHIR [Group](https://hl7.org/fhir/R4/group.html)
-resource to report information about distinct groups of resources that are available.
-It supports two different forms of reporting on this resource:
+### MHD Cross Profile Considerations
 
-1. Push - In which the Availability Source periodically reports the status of
-one or more Group Resources in a [Batch](https://hl7.org/fhir/R4/transaction.html) update.
+#### MHD Actor grouped with XDS infrastructure
 
-2. Pull - In which the Availability Collector periodically queries the status of one
-or more Group Resources in one or more [Search](https://hl7.org/fhir/R4/search.html) operations.
+When the MHD Document Recipient is acting as a proxy for an XDS environment, it could be grouped with an XDS Document Source as the “XDS on FHIR” Option defines. In this way, a received Provide Document Bundle [ITI-65] transaction would be converted by the grouped system into an XDS Provide and Register Document Set-b [ITI-41] transaction. The MHD Document Recipient, acting as a proxy, could be configured to support only a designated set of mobile devices authorized by the hosting organization and use the security model defined by that hosting organization. The proxy might convert user authentication credentials, and fully implement the ATNA Secure Node or Secure Application Actors. 
 
-Both of these operations are expected to be periodic, and the Collector is expected
-to support both forms depending upon how it is configured.  This enables Availability
-Sources to have a choice about how the data is updated, yet retains the ability of the
-Availability Collector to detect systems that are offline or not-responding.  In the
-Push case, the Availability Collector can be configured to detect that availability
-data is not being updated frequently enough.  In the Pull case, the Availability
-Collector can detect systems which are not responsive to the queries that it is
-performing.
+Other proxy architectures to XDS are possible such as grouped with an XDS Integrated Document Source/Repository.
 
-### Using the Group Resource
+When the MHD Document Responder is acting as a proxy for an XDS environment, it could be grouped with an XDS Document Consumer. In this way, the MHD Find Document Manifests [ITI-66], Find Document References [ITI-67], and Retrieve Document [ITI-68] transactions will be supported in the system using the appropriate XDS Registry Stored Query [ITI-18] and Retrieve Document Set-b [ITI-43] transactions. This proxy would be configured to support a designated set of mobile devices and the security model defined by the hosting organization. The proxy might fill in missing metadata information, convert user authentication credentials, and fully implement the IHE ATNA Secure Node or Secure Application Actors.
 
-According to the FHIR Standard:
+Not diagramed here is how PDQm and/or PIXm could similarly be used and implemented.
 
-> The FHIR Group Resource is able to define a set of _possible_ ... devices,
-> etc. that are of interest for some intended future healthcare-related activities.
+These two environments are illustrated in Figure 3.66.1-1.
+ 
+![Figure: MHD Actors grouped with XDS Document Sharing](Figure33.6.1-1.png)
 
-It is that intent that is being utilized when applying the Group resource to the use
-cases in this guide.  A group is defined by describing the desired characteristics of
-the group.
+<div style="clear: left"/>
 
-Each Group resource managed by an Availability Source fully describes a distinct set of available
-resources and has a unique id, and that UUID is a persistent identifier for describing a collection
-of resources with a given set of characteristics. For the purposes of this specification,
-the ```Group.id``` field of any group exchanged must be a [UUID](https://www.ietf.org/rfc/rfc4122.html)
-as described by RFC 4122, and may not be the [nil-UUID](https://www.ietf.org/rfc/rfc4122.html#section-4.1.7),
-but is otherwise unconstrained.  It may be a version 1 UUID (e.g., generated from MAC
-address and time-stamp), a version 4 randomly generated UUID, or any other variant.
-The version 4 UUID is often the most recommended by security professionals to avoid leaking
-information about network devices.
+**Figure 33.6.1-1: MHD Actors grouped with XDS Document Sharing**
 
-#### Group Characteristics
+#### MHD Actors grouped with XCA infrastructure
 
-There are two different types of Group resources which are used by this guide.  A Bed Group
-describes a collection of beds based on their status (Active, Temporarily Unavailable,
-or Inactive), operational status, type of bed, and the entity managing the beds.  The
-Bed Group must be supported by all actors in this implementation guide.  A bed is both a
-device (the physical bed), and has an associated location and features.  This guide
-defines the characteristics of a bed, its location and associated features as a set
-of characteristics that define a group of beds.  The members of the group are those
-beds which have matching characteristics.
+When an MHD Document Responder acts as a proxy into an XCA environment, it could be grouped with an Initiating Gateway. This type of MHD Document Responder will support the Find Document Manifests [ITI-66], Find Document References [ITI-67], and Retrieve Document [ITI-68] transactions by utilizing the XCA Cross Gateway Query [ITI-38] and Cross Gateway Retrieve [ITI-39] transactions as necessary. This type of proxy would be configured to support a designated set of mobile devices and enable a security model as defined by the hosting organization. The proxy might fill in missing metadata information, convert user authentication credentials, and fully implement the ATNA Secure Node or Secure Application requirements.
+ 
+![Figure: MHD Actors grouped with XCA](Figure33.6.2-1.png)
 
-A Device Group describes a collection of medical devices based on their availability
-status, type of device, and entity managing the device. The Device Group is supported
-by actors that implement the [Resource Option](actors_and_transactions.html#resource-option)
-described in this guide.
+<div style="clear: left"/>
 
-Group resources are distinguished by the characteristics which define the group.  This
-guide describes the [Extensible](https://www.hl7.org/fhir/terminologies.html#extensible)
-vocabularies used to describe these characteristics.
+**Figure 33.6.2-1: MHD Actors grouped with XCA**
 
-#### Bed Group Characteristics
-Status
-: The status characteristic corresponds to the [status](https://www.hl7.org/fhir/location-definitions.html#Location.status)
-field of the the FHIR [Location Resource](https://hl7.org/fhir/R4/location.html).
+#### MHD Actor grouped with Retrieve Information for Display (RID) Profile
 
-The vocabulary for the Status Characteristic is defined by the required
-vocabulary for Location.status.
+The Retrieve Information for Display (RID) Profile includes a similar set of transactions to those defined in the MHD Profile for Document Consumer. The RID Profile is focused more on delivering display-ready health information that may or may not be document based, whereas the MHD Profile focuses on providing access to Documents and the metadata about the document. Grouping the RID Information Source with an MHD Document Responder will provide both access to the metadata and document content, and also access to display-ready information. 
 
-<table class='grid'>
-<thead>
-<tr><th>Code</th><th>Implementation Guidance</th></tr>
-</thead>
-<tbody>
-<tr><td>active</td><td>Beds described by this characteristic are operational (but may be in use).</td></tr>
-<tr><td>suspended</td><td>Beds described by this characteristic are temporarily out of service.</td></tr>
-<tr><td>inactive</td><td>Beds described by this characteristic are no longer operational (e.g., Closed).</td></tr>
-</tbody>
-</table>
+![Figure: MHD Actors grouped with RID](Figure33.6.3-1.png)
 
-Operational Status
-: The Operational Status characteristic corresponds to the
-[operationalStatus](https://www.hl7.org/fhir/location-definitions.html#Location.operationalStatus)
-field of the FHIR [Location Resource](https://hl7.org/fhir/R4/location.html).
+<div style="clear: left"/>
 
-Values for this field come from the [Bed Location Operational Status Value Set](ValueSet-BedLocationOperationalStatus.html).
+**Figure 33.6.3-1: MHD Actors grouped with RID**
 
-NOTE: The HL7 V2 code supporting Isolation is not used in this value set because the ability to support isolation
-is a property of a bed which independent from the other operational status values.
-
-Type
-: The Type characteristic corresponds to the [type](https://www.hl7.org/fhir/location-definitions.html#Location.type)
-field of the FHIR [Location Resource](https://hl7.org/fhir/R4/location.html).
-
-Values for this field come from the [Bed Type Value Set](ValueSet-BedType.html).
-
-The vocabulary for the type characteristic is informed by the work of AHRQ,
-ANSI/HITSP, HL7, and OASIS in advancement of the OASIS HAVE standards, and the
-AHRQ [HAvBED](https://archive.ahrq.gov/prep/havbed2/) specification.
-
-The [HAvBEDtoFHIR Concept Map](ConceptMap-HAvBED2toFHIR.html) maps from vocabulary defined
-in the HAvBED2 specification to terminology defined in HL7 FHIR R4 and in this guide.
-
-Codes for NURSERY, BURNU, and OR are defined in the
-[SANER Bed Type Code System](CodeSystem-SanerBedType.html) created to fill the gaps in existing
-FHIR R4 Coding Systems.
-
-Property
-: The property characteristic describes other important capabilities of the Bed (or device).
-
-This characteristic is used to identify beds that support negative airflow
-or other isolation.  Isolation capabilities are "features" that can be added to a "Bed"
-by placing it in a location that supports isolation.
-
-Values for this field come from the [Bed Property Value Set](ValueSet-BedProperty.html).
-
-This value set is used to identify beds that support negative airflow
-or other isolation. Isolation capabilities are "features" that can be added
-to a "Bed" by placing it in a location that supports isolation.
-
-The values in this value set come from the [Saner Bed Type Coding System](CodeSystem-SanerBedType.html).
-
-The [HAvBEDtoFHIR Concept Map](ConceptMap-HAvBED2toFHIR.html) maps from vocabulary defined
-in the HAvBED2 specification to terminology defined [SANER Bed Type Code System](CodeSystem-SanerBedType.html)
-of this guide, created to fill the gaps in existing FHIR R4 Coding Systems.

@@ -23,13 +23,13 @@ The Mobile Cross-Enterprise Document Data Element Extraction (mXDE) Profile comb
 
 * Actors
 
-  - [Document Source](actors_and_transactions.html#document-source)
+  - [Document Source](2_actors_and_transactions.html#document-source)
 
-  - [Document Recipient](actors_and_transactions.html#document-recpient)
+  - [Document Recipient](2_actors_and_transactions.html#document-recpient)
 
-  - [Document Consumer](actors_and_transactions.html#document-consumer)
+  - [Document Consumer](2_actors_and_transactions.html#document-consumer)
 
-  - [Document Responder](actors_and_transactions.html#document-responder)
+  - [Document Responder](2_actors_and_transactions.html#document-responder)
 
 * Transactions
 
@@ -63,7 +63,7 @@ In this use case, a new document or set of documents is published from the mobil
 This use case presumes that the mobile device knows or discovers the patient identity. The patient identity might be obtained through some IHE transactional method such as the Patient Demographics Query for Mobile (PDQm) or Patient Identifier Cross-Reference for Mobile (PIXm) Profile. The patient id might simply be entered via some device interface (RFID, Bar-Code), a user interface, or be specified in a configuration setting (e.g., mobile PHR application). The use case also allows for identity cross-referencing to be implemented by the Document Recipient. 
 This use case presumes that the sending mobile device knows the location of the receiving URL endpoints, likely through a configuration setting, or through a workflow driven by a web interface.
 #### Publication of new documents Process Flow
-The publication of a new document(s) is done using the Provide Document Bundle [ITI-65] transaction, which carries both the document and its metadata. This transaction is analogous to an XDS Provide and Register Document Set-b [ITI-41] transaction.
+The publication of a new document(s) is done using the Provide Document Bundle [ITI-65](transaction-65.html) transaction, which carries both the document and its metadata. This transaction is analogous to an XDS Provide and Register Document Set-b [ITI-41] transaction.
 
 ![Figure: Use Case 1 process flow](usecase1-processflow.svg "Figure: Use Case 1 process flow")
 
@@ -77,11 +77,11 @@ The publication of a new document(s) is done using the Provide Document Bundle [
 In this use case, the mobile device needs access to existing documents. For example, a mobile device involved in a workflow needs to determine the current state of the workflow, or the mobile device needs to discover the most current medical summary. 
 
 #### Discovery Retrieval of existing documents Process Flow
-The Find Document References [ITI-67] transaction is used to issue parameterized queries that result in a list of DocumentReference Resources, where a DocumentReference Resource carries the XDS DocumentEntry metadata, which is metadata about a document.
+The Find Document References [ITI-67](transaction-67.html) transaction is used to issue parameterized queries that result in a list of DocumentReference Resources, where a DocumentReference Resource carries the XDS DocumentEntry metadata, which is metadata about a document.
 
-Alternatively, the Find Document Manifest [ITI-66] transaction is used to issue parameterized queries that result in a set of DocumentManifest Resources, where a DocumentManifest Resource carries the XDS SubmissionSet metadata, which is a container for a set of DocumentEntry objects that were published as a set.
+Alternatively, the Find Document Manifest [ITI-66](transaction-66.html) transaction is used to issue parameterized queries that result in a set of DocumentManifest Resources, where a DocumentManifest Resource carries the XDS SubmissionSet metadata, which is a container for a set of DocumentEntry objects that were published as a set.
 
-The Retrieve Document [ITI-68] transaction is used to get the document itself.
+The Retrieve Document [ITI-68](transaction-68.html) transaction is used to get the document itself.
 
 ![Figure: Use Case 2 process flow](usecase2-processflow.svg "Figure: Use Case 2 process flow")
 
