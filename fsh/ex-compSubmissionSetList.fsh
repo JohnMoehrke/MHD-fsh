@@ -1,6 +1,7 @@
-Instance:   compSubmissionSetList
+Instance:   ex-compSubmissionSetList
 InstanceOf: IHE.MHD.Comprehensive.ListManifest
-Title:      "SubmissionSet in List resource conforming only to Comprehensive metadata"
+Title: "Example Comprehensive List Manifest"
+Description:      "SubmissionSet in List resource conforming only to Comprehensive metadata"
 * meta.security = http://terminology.hl7.org/CodeSystem/v3-ActReason#HTEST
 * subject = Reference(Patient/example)
 * identifier[0].system = "urn:ietf:rfc:3986"
@@ -11,10 +12,11 @@ Title:      "SubmissionSet in List resource conforming only to Comprehensive met
 * identifier[1].use = #usual
 * status = #current
 * mode = #working
-* title = "Physical"
+* title = "Example SubmissionSet for comprehensive metadata"
 * code = MHDlistTypes#submissionset
 * date = 2004-12-25T23:50:50-05:00
 * source = Reference(Organization/example)
 * entry[0].item = Reference(DocumentReference/example)
 * entry[1].item = Reference(List/example)
-* extension[workflow-reasonCode].valueCodeableConcept = http://snomed.info/sct#225728007
+* extension[TypeOfList][0].valueCodeableConcept = http://snomed.info/sct#225728007
+* extension[TypeOfList][1].valueCodeableConcept = http://snomed.info/sct#284548004

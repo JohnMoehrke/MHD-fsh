@@ -25,7 +25,7 @@ The Mobile Cross-Enterprise Document Data Element Extraction (mXDE) Profile comb
 
   - [Document Source](2_actors_and_transactions.html#document-source)
 
-  - [Document Recipient](2_actors_and_transactions.html#document-recpient)
+  - [Document Recipient](2_actors_and_transactions.html#document-recipient)
 
   - [Document Consumer](2_actors_and_transactions.html#document-consumer)
 

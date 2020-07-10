@@ -28,6 +28,9 @@ This Continuous Build will appear http://build.fhir.org/ig/JohnMoehrke/MHD-fsh/b
 1. The profiling of a Bundle seems to not be the same as for Resources. Thus I have added a more simple bundle "degenerate". This is not enforcing the full MHD Provide transaction requirements.
 1. Convert Folder and SubmissionSet narrative to the use of List. Narrative today is mostly right out of existing MHD and thus uses DocumentManifest.
 1. Finish the audit events for Find Lists, Find Documents, and Retrieve Document
+1. provide DocumentReference examples
+1. Provide bundle examples
+1. Add query parameter for ihe type
 
 ## IHE issues
 

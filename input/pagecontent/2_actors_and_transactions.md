@@ -34,7 +34,7 @@ Table 3-1: MHD Implementation Guide - Actors and Transactions
 <tr class="even">
                         
 <td rowspan="1">
-<a href="actors_and_transactions.html#document-source">Document Source</a>
+<a href="2_actors_and_transactions.html#document-source">Document Source</a>
 </td>
                         
 <td>
@@ -50,7 +50,7 @@ Table 3-1: MHD Implementation Guide - Actors and Transactions
 <tr class="even">
                         
 <td rowspan="1">
-<a href="actors_and_transactions.html#Document Recipient">Document Recipient</a>
+<a href="2_actors_and_transactions.html#Document Recipient">Document Recipient</a>
 </td>
                         
 <td>
@@ -68,7 +68,7 @@ Table 3-1: MHD Implementation Guide - Actors and Transactions
 <tr class="even">
                         
 <td rowspan="3">
-<a href="actors_and_transactions.html#document-consumer">Document Consumer</a>
+<a href="2_actors_and_transactions.html#document-consumer">Document Consumer</a>
 </td>
                         
 <td>
@@ -109,7 +109,7 @@ Table 3-1: MHD Implementation Guide - Actors and Transactions
 <tr class="odd">
                         
 <td rowspan="3">
-<a href="actors_and_transactions.html#document-responder">Document Responder</a>
+<a href="2_actors_and_transactions.html#document-responder">Document Responder</a>
 </td>
                         
 <td>
@@ -201,7 +201,7 @@ between options when applicable are specified in notes.
                 </tr>
                 <tr>
                 
-                <td><a href="#XDS-on-FHIR-option">XDS on FHIR</a></td>
+                <td><a href="#xds-on-fhir-option">XDS on FHIR</a></td>
                 </tr>
                         
                 <tr>
@@ -215,7 +215,7 @@ between options when applicable are specified in notes.
                 
                     <td rowspan='1'>Document Responder</td>
                                 
-                <td><a href="#XDS-on-FHIR-option">XDS on FHIR</a></td>
+                <td><a href="#xds-on-fhir-option">XDS on FHIR</a></td>
                 </tr>
     </tbody>
 </table>

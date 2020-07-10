@@ -226,7 +226,14 @@ The IHE MHD Profile text is Normative, this conformance resource is Informative.
 		<parameter>
 		  <code value="releaselabel"/>
 		  <value value="CI Build"/>
-		</parameter>  </definition>
-
-
+		</parameter>  
+		<parameter>
+			<code value="autoload-resources" />
+			<value value="true" />
+		</parameter>
+		<parameter>
+			<code value="path-suppressed-warnings" />
+			<value value="ignoreWarnings.md" />
+		</parameter>
+</definition>
 </ImplementationGuide>

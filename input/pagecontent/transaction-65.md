@@ -9,8 +9,8 @@ The Provide Document Bundle [ITI-65] transaction passes a Provide Document Bundl
 **Table: Actor Roles**
 |Actor | Role |
 |-------------------+--------------------------|
-|Document Source    | Sends documents and metadata to the Document Recipient |
-|Document Recipient | Accepts the document and metadata sent from the Document Source |
+| [Document Source](2_actors_and_transactions.html#document-source)    | Sends documents and metadata to the Document Recipient |
+| [Document Recipient](2_actors_and_transactions.html#document-recipient) | Accepts the document and metadata sent from the Document Source |
 
 ### Referenced Standards
 
@@ -138,7 +138,7 @@ Document Recipient implementing this transaction shall provide a CapabilityState
 
 ### Security Considerations
 
-See [MHD Security Considerations](security_considerations.html)
+See [MHD Security Considerations](3_security_considerations.html)
 
 #### Security Audit Considerations
 

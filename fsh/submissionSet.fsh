@@ -4,20 +4,7 @@ Parent:         List
 Id:             IHE.MHD.Minimal.ListManifest
 Title:          "MHD SubmissionSet in List"
 Description:    "A profile on the List resource for MHD SubmissionSet."
-* ^version = "3.1.1"
-* ^date = "2020-02-01"
-* ^publisher = "Integrating the Healthcare Enterprise (IHE)" 
-* ^contact[0].name = "IHE"
-* ^contact[0].telecom.system = #url
-* ^contact[0].telecom.value = "http://ihe.net"
-* ^contact[1].name = "John Moehrke"
-* ^contact[1].telecom.system = #email
-* ^contact[1].telecom.value = "JohnMoehrke@gmail.com"
-* ^copyright = "IHE http://www.ihe.net/Governance/#Intellectual_Property" 
-//  fhir version comes from IG definition
-// mappings are yet to be implemented
-
-* extension contains ReasonCodeExtension named workflow-reasonCode 0..*
+* extension contains TypeOfList named typeOfList 0..*
 * identifier 0..*
 //* status
 * mode = #working
@@ -35,7 +22,14 @@ Description:    "A profile on the List resource for MHD SubmissionSet."
 * entry.deleted 0..0
 * entry.date 0..0
 * entry.item 1..1
-* entry.item only Reference(DocumentReference | List)
+* entry.item only Reference(DocumentReference or List)
 * entry.item ^type.aggregation = #referenced
 * emptyReason 0..0
+
+// TODO: Finish mappings to XDS 
+Mapping: SubmissionSet-Mapping
+Source:	SubmissionSet
+Target: "XDS"
+Title: "XDS and MHD Mapping"
+* identifier -> "SubmissionSet.entryUUID"
 

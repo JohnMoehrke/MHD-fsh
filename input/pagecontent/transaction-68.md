@@ -6,28 +6,15 @@ The Retrieve Document [ITI-68] transaction is used by the Document Consumer to r
 
 ### Actors Roles
 
-<table border='1' borderspacing='0'>
-<caption><b>Table: Actor Roles</b></caption>
-<thead><tr><th>Actor</th><th>Role</th></tr></thead>
-<tbody><tr><td><a href="actors_and_transactions.html#document-consumer">Document Consumer</a></td>
-<td>Requests a document from the Document Responder</td>
-</tr>
-<tr><td><a href="actors_and_transactions.html#document-responder">Document Responder</a></td>
-<td>Serves the document to the Document Consumer</td>
-</tr>
-</tbody>
-</table>
-
+**Table: Actor Roles**
+|Actor | Role |
+|-------------------+--------------------------|
+| [Document Consumer](2_actors_and_transactions.html#document-consumer)    | Requests a document from the Document Responder |
+| [Document Responder](2_actors_and_transactions.html#document-responder) | Serves the document to the Document Consumer |
 
 ### Referenced Standards
 
-<table border='1' borderspacing='0'>
-<caption><b>Table 3.71.3-1: Referenced Standards</b></caption>
-<thead><tr><th>Standard</th><th>Name</th></tr></thead>
-<tbody>
-<tr><td>FHIR-R4</td><td><a href='http://www.hl7.org/FHIR/R4'>HL7 FHIR Release 4.0</a></td></tr>
-</tbody>
-</table>
+**FHIR-R4** [HL7 FHIR Release 4.0](http://www.hl7.org/FHIR/R4)
 
 ### Interactions
         
@@ -101,7 +88,7 @@ Document Responders implementing this transaction shall provide a CapabilityStat
 
 ### Security Considerations
 
-See [MHD Security Considerations](security_considerations.html)
+See [MHD Security Considerations](3_security_considerations.html)
 
 This transaction should not return information that the Document Consumer is not authorized to access. 
 

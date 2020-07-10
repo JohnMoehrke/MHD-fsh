@@ -1,15 +1,7 @@
 id: ihe.mhd.fhir
 canonical: http://ihe.net/fhir/ihe.mhd.fhir
-name: IHE.ITI.MHD
-title: "MHD Sushi Implementation Guide"
-description: "An example of how FSH can be used to create an IG about fish"
-status: active
-license:  CC-BY-4.0
+name: ihe.mhd.fhir
 version: 0.1.0
 fhirVersion: 4.0.1
-template: ihe.fhir.template
-copyrightYear: 2019+
-releaseLabel: TI
-publisher:
-  name: IHE
-  email: John.Moehrke@gmail.com
+status: active
+FSHOnly: true

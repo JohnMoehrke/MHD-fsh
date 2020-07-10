@@ -8,27 +8,15 @@ The Find Document Manifests [ITI-66] transaction is used to find DocumentManifes
 
 ### Actors Roles
 
-<table border='1' borderspacing='0'>
-<caption><b>Table: Actor Roles</b></caption>
-<thead><tr><th>Actor</th><th>Role</th></tr></thead>
-<tbody><tr><td><a href="actors_and_transactions.html#document-consumer">Document Consumer</a></td>
-<td>Requests a list of DocumentManifest Resources, matching the supplied set of criteria, from the Document Responder</td>
-</tr>
-<tr><td><a href="actors_and_transactions.html#document-responder">Document Responder</a></td>
-<td>Returns DocumentManifest Resources that match the search criteria provided by the Document Consumer</td>
-</tr>
-</tbody>
-</table>
+**Table: Actor Roles**
+|Actor | Role |
+|-------------------+--------------------------|
+| [Document Consumer](2_actors_and_transactions.html#document-consumer)     | Requests a list of DocumentManifest Resources, matching the supplied set of criteria, from the Document Responder |
+| [Document Responder](2_actors_and_transactions.html#document-responder) | Returns DocumentManifest Resources that match the search criteria provided by the Document Consumer |
 
 ### Referenced Standards
 
-<table border='1' borderspacing='0'>
-<caption><b>Table 3.71.3-1: Referenced Standards</b></caption>
-<thead><tr><th>Standard</th><th>Name</th></tr></thead>
-<tbody>
-<tr><td>FHIR-R4</td><td><a href='http://www.hl7.org/FHIR/R4'>HL7 FHIR Release 4.0</a></td></tr>
-</tbody>
-</table>
+**FHIR-R4** [HL7 FHIR Release 4.0](http://www.hl7.org/FHIR/R4)
 
 ### Interactions
         
@@ -179,7 +167,7 @@ Document Responders implementing this transaction shall provide a CapabilityStat
 
 ### Security Considerations
 
-See [MHD Security Considerations](security_considerations.html)
+See [MHD Security Considerations](3_security_considerations.html)
 
 This transaction should not return information that the Document Consumer is not authorized to access. Where authorization here is inclusive of system, app, and user according to local policy, patient consents, and security layering. However, the transaction may return List resources that have Reference elements that the Document Consumer may not have access to. This is to say that the authorization need only be to the content returned in the Bundle. There may be references (URLs) for which the content is not authorized. This is considered proper as the Document Consumer would need to retrieve the content pointed to by those references, and at that time the proper authorization decision would be made on that context and content. In this way it is possible for a Document Consumer to get List Resources that are pointing at data that the Document Consumer is not authorized to retrieve. Thus, the URLs used must be carefully crafted so as to not expose sensitive data in the URL value.
 

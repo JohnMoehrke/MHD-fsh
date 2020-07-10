@@ -3,21 +3,8 @@ Profile:        Folder
 Parent:         List
 Id:             IHE.MHD.Minimal.ListFolder
 Title:          "MHD Folder in List"
-Description:    "A profile on the List resource for MHD Folder."
-* ^version = "3.1.1"
-* ^date = "2020-02-01"
-* ^publisher = "Integrating the Healthcare Enterprise (IHE)" 
-* ^contact[0].name = "IHE"
-* ^contact[0].telecom.system = #url
-* ^contact[0].telecom.value = "http://ihe.net"
-* ^contact[1].name = "John Moehrke"
-* ^contact[1].telecom.system = #email
-* ^contact[1].telecom.value = "JohnMoehrke@gmail.com"
-* ^copyright = "IHE http://www.ihe.net/Governance/#Intellectual_Property" 
-//  fhir version comes from IG definition
-// mappings are yet to be implemented in sushi
-
-* extension contains ReasonCodeExtension named workflow-reasonCode 0..*
+Description:    "A profile on the List resource for MHD Minimal Metadata Folder."
+* extension contains TypeOfList named typeOfList 0..*
 * identifier 0..*
 //* status
 * mode = #working
@@ -38,3 +25,15 @@ Description:    "A profile on the List resource for MHD Folder."
 * entry.item only Reference(DocumentReference)
 * entry.item ^type.aggregation = #referenced
 * emptyReason 0..0
+
+// TODO: Finish mappings to XDS 
+Mapping: Folder-Mapping
+Source:	Folder
+Target: "XDS"
+Title: "XDS and MHD Mapping"
+* identifier -> "Folder.entryUUID"
+* status -> "Folder.status"
+* mode -> "fixed at working"
+* title -> "Folder.title"
+* code -> "toggle submissionSet vs folder"
+* subject -> "Folder.patient"
