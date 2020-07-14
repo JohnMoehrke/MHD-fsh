@@ -148,7 +148,7 @@ The IHE MHD Profile text is Normative, this conformance resource is Informative.
       <generation value="html"/>
       <page>
         <nameUrl value="index.html"/>
-        <title value="MyIG Home Page"/>
+        <title value="MHD Home Page"/>
         <generation value="markdown"/>
       </page>
       <page>
