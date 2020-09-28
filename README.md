@@ -9,7 +9,7 @@ The IHE MHD Profile text is Normative, this IG publication is Informative.
 
 This Continuous Build will appear http://build.fhir.org/ig/JohnMoehrke/MHD-fsh/branches/master/index.html
 
-Testing markdown **bold** , ~~strike~~, <u>underscore</u>, **__bold and underscore__**, and ""~~bold and strike~~**
+Testing markdown **bold** , ~~strike~~, ___underscore___, **__bold and underscore__**, and ""~~bold and strike~~**
 
 ## Done
 
